@@ -43,7 +43,7 @@ components:
     - name: HOME
       value: "/projects/home"
     - name: VSCODE_DEFAULT_WORKSPACE
-      value: "/projects/llama-cpp-intel-npu/llama-cpp-intel-npu.code-workspace"
+      value: "/projects/llama-cpp-intel-gpu-workspace/llama-cpp-intel-gpu.code-workspace"
     - name: GOPATH
       value: /projects/home/go
 - name: llama-cpp
