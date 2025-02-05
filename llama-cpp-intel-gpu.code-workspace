@@ -1,12 +1,12 @@
 {
 	"folders": [
 		{
-			"name": "ramalama",
-			"path": "/projects/ramalama"
-		},
-		{
 			"name": "llama-cpp-intel-gpu-workspace",
 			"path": "/projects/llama-cpp-intel-gpu-workspace"
+		},
+		{
+			"name": "ramalama",
+			"path": "/projects/ramalama"
 		}
 	],
 	"extensions": {
