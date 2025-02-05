@@ -11,7 +11,7 @@ projects:
       checkoutFrom:
         remote: origin
         revision: main
-  - name: ramallama
+  - name: ramalama
     git:
       remotes:
         origin: https://github.com/cgruver/ramalama.git
