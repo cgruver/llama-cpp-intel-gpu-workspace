@@ -31,7 +31,7 @@ components:
       securityContext:
         procMount: Unmasked
   container:
-    image: quay.io/cgruver0/che/workspace-base:latest
+    image: quay.io/cgruver0/che/ramalama-dev:latest
     memoryLimit: 16Gi
     memoryRequest: 1Gi
     cpuLimit: 8000m
@@ -48,7 +48,7 @@ components:
       value: /projects/home/go
 - name: llama-cpp
   container:
-    image: quay.io/cgruver0/llama-cpp-intel-gpu:test
+    image: quay.io/cgruver0/llama-cpp-intel-gpu:latest
     sourceMapping: /projects
     memoryLimit: 16Gi
     memoryRequest: 1Gi

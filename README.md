@@ -238,3 +238,15 @@ pip install ramalama
 export PATH=${PATH}:${HOME}/.local/bin
 
 ramalama --gpu --image quay.io/cgruver0/llama-cpp-intel-gpu:latest run granite-code:3b
+
+## Intel GPU Devices
+
+[https://dgpu-docs.intel.com/devices/hardware-table.html](https://dgpu-docs.intel.com/devices/hardware-table.html)
+
+```bash
+cat /sys/bus/pci/drivers/i915/0000:00:02.0
+```
+
+pip install . --no-deps --root / --prefix ${HOME}/ramalama
+export PYTHONPATH=${HOME}/ramalama/lib/python3.12/site-packages
+export PATH=${PATH}:${HOME}/ramalama/bin

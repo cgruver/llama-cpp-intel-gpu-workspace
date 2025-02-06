@@ -16,7 +16,8 @@
 			"eamodio.gitlens",
 			"streetsidesoftware.code-spell-checker",
 			"johnpapa.winteriscoming",
-			"cnshenj.vscode-task-manager"
+			"cnshenj.vscode-task-manager",
+			"ms-python.python"
 		]
 	},
 	"settings": {
