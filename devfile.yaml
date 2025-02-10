@@ -50,14 +50,14 @@ components:
   container:
     image: quay.io/cgruver0/llama-cpp-intel-gpu:latest
     sourceMapping: /projects
-    memoryLimit: 16Gi
+    memoryLimit: 24Gi
     memoryRequest: 1Gi
     cpuLimit: 8000m
     cpuRequest: 1000m
     endpoints:
       - exposure: public
         name: llama-cpp
-        protocol: http
+        protocol: https
         targetPort: 8080
 - volume:
     size: 20Gi

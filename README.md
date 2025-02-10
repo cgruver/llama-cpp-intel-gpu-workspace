@@ -47,7 +47,11 @@ cmake .. -DGGML_SYCL=ON -DCMAKE_C_COMPILER=icx -DCMAKE_CXX_COMPILER=icpx -DGGML_
 cmake --build . --config Release -v
 
 # Notes - Not Necessarily Working...
-podman run -it --name llama --rm --entrypoint /bin/bash --device /dev/dri -p 8080:8080 quay.io/cgruver0/llama-cpp-intel-gpu:latest
+mkdir models
+chmod 777 models
+podman run -it --name llama --rm --device /dev/dri -p 8080:8080 -v ${PWD}/models:/models:Z quay.io/cgruver0/llama-cpp-intel-gpu:latest /bin/bash
+
+llama-server --model /models/granite-code:8b --host 0.0.0.0 --n-gpu-layers 999 --flash-attn --ctx-size 32768
 
 --offload-new-driver
 
@@ -250,3 +254,6 @@ cat /sys/bus/pci/drivers/i915/0000:00:02.0
 pip install . --no-deps --root / --prefix ${HOME}/ramalama
 export PYTHONPATH=${HOME}/ramalama/lib/python3.12/site-packages
 export PATH=${PATH}:${HOME}/ramalama/bin
+export RAMALAMA_GPU_DEVICE=/dev/dri/renderD128
+
+ramalama serve granite-code:3b
