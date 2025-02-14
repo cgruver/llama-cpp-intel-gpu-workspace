@@ -32,9 +32,9 @@ components:
         procMount: Unmasked
   container:
     image: quay.io/cgruver0/che/ramalama-dev:latest
-    memoryLimit: 16Gi
+    memoryLimit: 24Gi
     memoryRequest: 1Gi
-    cpuLimit: 8000m
+    cpuLimit: '16'
     cpuRequest: 1000m
     mountSources: true
     env:
@@ -46,14 +46,6 @@ components:
       value: "/projects/llama-cpp-intel-gpu-workspace/llama-cpp-intel-gpu.code-workspace"
     - name: GOPATH
       value: /projects/home/go
-- name: llama-cpp
-  container:
-    image: quay.io/cgruver0/llama-cpp-intel-gpu:latest
-    sourceMapping: /projects
-    memoryLimit: 24Gi
-    memoryRequest: 1Gi
-    cpuLimit: 8000m
-    cpuRequest: 1000m
     endpoints:
       - exposure: public
         name: llama-cpp

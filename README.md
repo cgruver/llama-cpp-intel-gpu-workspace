@@ -251,9 +251,17 @@ ramalama --gpu --image quay.io/cgruver0/llama-cpp-intel-gpu:latest run granite-c
 cat /sys/bus/pci/drivers/i915/0000:00:02.0
 ```
 
+## Build and Install locally
+```bash
 pip install . --no-deps --root / --prefix ${HOME}/ramalama
+```
+
+
+Run in workspace -
+
+```bash
 export PYTHONPATH=${HOME}/ramalama/lib/python3.12/site-packages
 export PATH=${PATH}:${HOME}/ramalama/bin
-export RAMALAMA_GPU_DEVICE=/dev/dri/renderD128
 
-ramalama serve granite-code:3b
+ramalama --ngl 33 --gpu serve --ctx-size 32768 --device /dev/dri/renderD128 --network podman granite-code:3b
+```
