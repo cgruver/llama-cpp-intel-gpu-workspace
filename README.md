@@ -263,5 +263,5 @@ Run in workspace -
 export PYTHONPATH=${HOME}/ramalama/lib/python3.12/site-packages
 export PATH=${PATH}:${HOME}/ramalama/bin
 
-ramalama --ngl 33 --gpu serve --ctx-size 32768 --device /dev/dri/renderD128 --network podman granite-code:3b
+ramalama serve --ngl 33 --ctx-size 32768 --device /dev/dri/renderD128 --network podman granite-code:3b
 ```
