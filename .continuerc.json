@@ -1,0 +1,67 @@
+{
+    "mergeBehavior": "overwrite",
+    "models": [
+      {
+        "model": "qwen2.5-coder:7b",
+        "provider": "llama.cpp",
+        "apiBase": "http://10.11.12.228:8080/",
+        "requestOptions": {
+          "caBundlePath": "/public-certs/tls-ca-bundle.pem"
+        },
+        "title": "Granite Code"
+      }
+    ],
+    "tabAutocompleteModel": {
+      "title": "Granite Code",
+      "provider": "llama.cpp",
+      "model": "qwen2.5-coder:7b",
+      "requestOptions": {
+        "caBundlePath": "/public-certs/tls-ca-bundle.pem"
+      },
+      "apiBase": "https://10.11.12.228:8080/"
+    },
+    "contextProviders": [
+      {
+        "name": "code",
+        "params": {}
+      },
+      {
+        "name": "docs",
+        "params": {}
+      },
+      {
+        "name": "diff",
+        "params": {}
+      },
+      {
+        "name": "terminal",
+        "params": {}
+      },
+      {
+        "name": "problems",
+        "params": {}
+      },
+      {
+        "name": "folder",
+        "params": {}
+      },
+      {
+        "name": "codebase",
+        "params": {}
+      }
+    ],
+    "slashCommands": [
+      {
+        "name": "share",
+        "description": "Export the current chat session to markdown"
+      },
+      {
+        "name": "cmd",
+        "description": "Generate a shell command"
+      },
+      {
+        "name": "commit",
+        "description": "Generate a git commit message"
+      }
+    ]
+  }
