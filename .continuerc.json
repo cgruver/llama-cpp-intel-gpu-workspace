@@ -2,9 +2,9 @@
     "mergeBehavior": "overwrite",
     "models": [
       {
-        "model": "qwen2.5-coder:7b",
+        "model": "granite3.1-moe:3b",
         "provider": "llama.cpp",
-        "apiBase": "http://10.11.12.228:8080/",
+        "apiBase": "https://llama-cpp-code-assistant-code-assistant.apps.region-01.clg.lab/",
         "requestOptions": {
           "caBundlePath": "/public-certs/tls-ca-bundle.pem"
         },
@@ -14,11 +14,11 @@
     "tabAutocompleteModel": {
       "title": "Granite Code",
       "provider": "llama.cpp",
-      "model": "qwen2.5-coder:7b",
+      "model": "granite3.1-moe:3b",
       "requestOptions": {
         "caBundlePath": "/public-certs/tls-ca-bundle.pem"
       },
-      "apiBase": "https://10.11.12.228:8080/"
+      "apiBase": "https://llama-cpp-code-assistant-code-assistant.apps.region-01.clg.lab/"
     },
     "contextProviders": [
       {

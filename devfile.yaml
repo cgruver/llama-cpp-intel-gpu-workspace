@@ -51,8 +51,8 @@ components:
       value: "/projects/home"
     - name: VSCODE_DEFAULT_WORKSPACE
       value: "/projects/llama-cpp-intel-gpu-workspace/llama-cpp-intel-gpu.code-workspace"
-    - name: GOPATH
-      value: /projects/home/go
+    - name: RAMALAMA_STORE
+      value: /projects/model-dir
     endpoints:
       - exposure: public
         name: llama-cpp

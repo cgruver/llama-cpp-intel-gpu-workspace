@@ -51,8 +51,6 @@ mkdir models
 chmod 777 models
 podman run -it --name llama --rm --device /dev/dri -p 8080:8080 -v ${PWD}/models:/models:Z quay.io/cgruver0/llama-cpp-intel-gpu:latest /bin/bash
 
-llama-server --model /models/granite-code:8b --host 0.0.0.0 --n-gpu-layers 999 --flash-attn --ctx-size 32768
-
 --offload-new-driver
 
 ```bash
@@ -262,6 +260,16 @@ Run in workspace -
 ```bash
 export PYTHONPATH=${HOME}/ramalama/lib/python3.12/site-packages
 export PATH=${PATH}:${HOME}/ramalama/bin
+export RAMLAMA_STORE=/projects/model-dir
 
 ramalama serve --ngl 33 --ctx-size 32768 --device /dev/dri/renderD128 --network podman granite-code:3b
+```
+
+Run LLama.CPP in workspace -
+
+```bash
+podman run -it --name llama --rm --device /dev/dri/renderD128 -p 8080:8080 --entrypoint /bin/bash -v /projects/model-dir:/model-dir:Z quay.io/cgruver0/che/my-code-assistant:latest
+
+source /opt/intel/oneapi/setvars.sh
+llama-server --model /model-dir/models/ollama/granite-code:3b --host 0.0.0.0 --n-gpu-layers 999 --flash-attn --ctx-size 32768 --jinja
 ```

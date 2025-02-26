@@ -1,0 +1,2 @@
+export PYTHONPATH=${HOME}/ramalama/lib/python3.12/site-packages
+export PATH=${PATH}:${HOME}/ramalama/bin
