@@ -1,5 +1,7 @@
 # OpenShift Dev Spaces Workspace for AI LLM Development with Intel GPU
 
+__Note -__ Archived in favor of [https://github.com/cgruver/intel-xpu-workspace.git](https://github.com/cgruver/intel-xpu-workspace.git)
+
 Initial Attempt to leverage native AI capabilities in the Intel Untra Core 7 chipset
 
 __Note:__ NPU support is not working yet.  llama-cpp does not support the NPU
